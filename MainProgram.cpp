@@ -121,6 +121,9 @@ public:
         //   6. Copy string data using strcpy()
         //   7. Return *this
         g_assignmentCount++;
+        if (this==&other){
+            return  *this;
+        }
         delete[]  m_data;
         m_length = other.m_length;
        m_data  = new char[m_length + 1 ];
